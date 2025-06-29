@@ -1,0 +1,6 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/XMART/Desktop/manim test/media/videos/manim_motion/1080p60/partial_movie_files/PointMovingOnShapes/3977891868_3575364746_3788634887.mp4'
+file 'file:C:/Users/XMART/Desktop/manim test/media/videos/manim_motion/1080p60/partial_movie_files/PointMovingOnShapes/2852726489_476271470_155512321.mp4'
+file 'file:C:/Users/XMART/Desktop/manim test/media/videos/manim_motion/1080p60/partial_movie_files/PointMovingOnShapes/2852726489_3997444073_1253141396.mp4'
+file 'file:C:/Users/XMART/Desktop/manim test/media/videos/manim_motion/1080p60/partial_movie_files/PointMovingOnShapes/2852726489_2149517065_155512321.mp4'
+file 'file:C:/Users/XMART/Desktop/manim test/media/videos/manim_motion/1080p60/partial_movie_files/PointMovingOnShapes/2852726489_2834709167_2544231052.mp4'
