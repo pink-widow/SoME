@@ -783,42 +783,4 @@ class Introduction(Scene):
         )
         n4_system = VGroup(all_nodes_n4, connections_n4).scale(0.8).to_edge(LEFT, buff=1.0)
         
-        # C. Define the target N=4 Hamiltonian formula with its title
-        total_conflict_title_n4 = Text("Total Conflict", font_size=36)
-        
-        h_total_label = MathTex("H", "=").set_color_by_tex_to_color_map({"H": H_COLOR,"=": WHITE})
-        terms = [MathTex(t) for t in ["s_1 J_{12} s_2", "+ s_1 J_{13} s_3", "+ s_2 J_{23} s_3", "+ s_1 J_{14} s_4", "+ s_2 J_{24} s_4", "+ s_3 J_{34} s_4"]]
-        for term in terms:
-            term.set_color_by_tex_to_color_map({"J": J_COLOR,"+": WHITE})
-            
-        line1_n4 = VGroup(*terms[:3]).arrange(RIGHT, buff=0.15)
-        line2_n4 = VGroup(*terms[3:]).arrange(RIGHT, buff=0.15)
-        
-        n4_formula_terms = VGroup(line1_n4, line2_n4).arrange(DOWN, buff=0.25, aligned_edge=LEFT)
-        n4_formula_body = VGroup(h_total_label, n4_formula_terms).arrange(RIGHT, buff=0.2)
-        
-        n4_hamiltonian_group = VGroup(total_conflict_title_n4, n4_formula_body).arrange(DOWN, buff=0.4)
-        n4_hamiltonian_group.scale(0.8).move_to(RIGHT * 3.0)
-
-        # 3. Animate the transformation from the N=3 system to the N=4 system
-        all_n3_objects = VGroup(triangle_system, n3_hamiltonian_group)
-        
-        self.play(
-            ReplacementTransform(all_n3_objects, VGroup(n4_system, n4_hamiltonian_group)),
-            run_time=2.5
-        )
-        self.wait(3)
-
-        # 4. Reveal the final, general formula
-        summation_formula = MathTex(r"H = \sum_{i<j} s_i J_{ij} s_j", font_size=60)
-        summation_formula.set_color_by_tex_to_color_map({
-            "H": H_COLOR,
-            "J_{ij}": J_COLOR
-        })
-        summation_formula.move_to(n4_hamiltonian_group.get_center())
-
-        self.play(
-            ReplacementTransform(n4_hamiltonian_group, summation_formula),
-            n4_system.animate.fade(0.7)
-        )
-        self.wait(5)
+       
